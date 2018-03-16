@@ -1,7 +1,6 @@
-# Esta en C:\Users\Estadistica\Dropbox\Varios\Autoayuda R\Ejemplos
 
-# oring.challenger <- read.table ("challenger_data.txt",header=TRUE, sep="")
-oring.challenger<- read.delim2("clipboard")
+oring.challenger <- read.table ("https://github.com/paradox62/hello-world/blob/master/oring%20challenger.R",header=TRUE, sep="")
+
 o_ring.model <- glm(falla~temp, family=binomial, data=oring.challenger)
 summary(o_ring.model)
 
@@ -21,4 +20,3 @@ plot(hat,dev_res)
 plot(pred_prob/df_temp)
 plot(hat,df_temp)
 o_ring2 <- cbind(oring.challenger,pred_prob,eta_hat,dev_res, df_int,df_temp,hat)
-write.table(o_ring2, "E:\\Autoayuda\\challenger_output.txt")
